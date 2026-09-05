@@ -154,13 +154,6 @@ linters:
       - linters:
           - cyclop
           - errcheck
-          - funlen
-          - gocognit
-          - nestif
-        path: (^|/)src/semantic-router/pkg/modelselection/benchmark_runner\.go$
-      - linters:
-          - cyclop
-          - errcheck
         path: (^|/)src/semantic-router/pkg/classification/vllm_client\.go$
       - linters:
           - cyclop

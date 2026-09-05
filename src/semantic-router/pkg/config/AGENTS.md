@@ -15,8 +15,9 @@
 - Treat canonical `version/listeners/providers/routing/global` parsing as the only steady-state runtime contract.
 - Keep migration-only compatibility out of the runtime parser; legacy user layouts belong in explicit migration tooling, not in normal config loading.
 - Keep canonical `providers` split readable:
-  - `providers.defaults` owns default selection and reasoning-family metadata
-  - `providers.models[]` owns concrete backend access bindings directly
+  - `providers.defaults` owns default model and reasoning-effort selection
+  - `providers.models[]` owns aliases, optional catalog references, custom reasoning metadata, and concrete backend bindings
+  - the repository catalog owns built-in reasoning-family and provider/protocol metadata
 - Keep canonical `global` layered, not flat:
   - `global.router` for router-engine control knobs
   - `global.services` for shared APIs and control-plane services
